@@ -1,13 +1,21 @@
 package cn.gridlife.jigong
 
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
+import android.content.Intent
+import android.view.View
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : BaseActivity() {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
 
+
+    fun action2(view: View) {
+        startActivity(Intent(this,SecondActivity::class.java))
+    }
+
+    override fun getCurrentClassName(): String? {
+        return MainActivity::class.java.simpleName
+    }
+
+    override fun getLayoutID(): Int {
+        return R.layout.activity_record
     }
 }
