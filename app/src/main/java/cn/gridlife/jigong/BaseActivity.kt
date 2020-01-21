@@ -9,7 +9,6 @@ abstract class BaseActivity : AppCompatActivity(){
         super.onCreate(savedInstanceState)
         setContentView(getLayoutID())
         Log.i(getCurrentClassName(),"onCreate")
-
     }
 
     abstract fun getCurrentClassName(): String?
